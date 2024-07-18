@@ -30,7 +30,7 @@ class Auteur
 
     public function afficherBibliographie()
     {
-        echo "Bibliographie de " . $this->_nom . " (".âge()."): <br>";
+        echo "Bibliographie de " . $this->_nom . ": <br>";
         foreach ($this->_livres as $livre) {
             echo $livre;
         }
