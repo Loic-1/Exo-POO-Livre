@@ -4,17 +4,17 @@ require 'Auteur.php';//pour appeler ajouterLivre()
 
 class Livre
 {
-    private $_titre;
+    private string $_titre;
 
-    private $_nbPages;
+    private int $_nbPages;
 
-    private $_parution;
+    private string $_parution;
 
-    private $_prix;
+    private int $_prix;
 
-    private $_auteur;
+    private Auteur $_auteur;
 
-    public function __construct($titre, $nbPages, $parution, $prix, $auteur)
+    public function __construct(string $titre, int $nbPages, string $parution, int $prix, Auteur $auteur)
     {
         $this->_titre = $titre;
         $this->_nbPages = $nbPages;
@@ -24,7 +24,7 @@ class Livre
         $auteur->ajouterLivre($this);//update _livres de $auteur
     }
 
-    public function __toString()
+    public function __toString() : string
     {
                 return "$this->_titre ($this->_parution) : $this->_nbPages pages / $this->_prix €<br>";
     }

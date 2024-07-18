@@ -2,20 +2,20 @@
 
 class Auteur
 {
-    private $_nom;
+    private string $_nom;
 
-    private $_livres;
+    private array $_livres;
 
-    private $_dateNaissance; //forme ("YYYY-MM-DD")
+    private string $_dateNaissance; //forme ("YYYY-MM-DD")
 
-    public function __construct($nom, $dateNaissance)
+    public function __construct(string $nom, string $dateNaissance)
     {
         $this->_nom = $nom;
         $this->_dateNaissance = $dateNaissance;
         $this->_livres = []; //array
     }
 
-    public function ajouterLivre($livre)
+    public function ajouterLivre(Livre $livre)
     {
         array_push($this->_livres, $livre);
     }
@@ -36,7 +36,7 @@ class Auteur
         }
     }
 
-    public function __toString()
+    public function __toString() : string
     {
         return $this->_nom;
     }
