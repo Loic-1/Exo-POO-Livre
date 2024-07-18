@@ -12,7 +12,7 @@ $livre = new Livre("Le Fléau", 374, 1978, 14, $auteur);
 $livre = new Livre("Shining", 447, 1977, 16, $auteur);
 
 $auteur->afficherBibliographie();
-$auteur->âge();
+// $auteur->âge();
 
 
 echo"<br>fin";

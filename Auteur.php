@@ -20,13 +20,6 @@ class Auteur
         array_push($this->_livres, $livre);
     }
 
-    public function âge()
-    {
-        $aujourdhui = new DateTime();
-        $anniversaire = new DateTime($this->_dateNaissance);
-        $âge = $aujourdhui->diff($anniversaire)->y; //echo $date1->diff($date2)->y;
-        echo "$this->_nom a $âge ans.";
-    }
 
     public function afficherBibliographie()
     {
